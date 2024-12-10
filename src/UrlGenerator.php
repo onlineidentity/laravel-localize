@@ -6,6 +6,7 @@ namespace KingsCode\LaravelLocalize;
 
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Http\Request;
+use Illuminate\Routing\AbstractRouteCollection;
 use Illuminate\Routing\Exceptions\UrlGenerationException;
 use Illuminate\Routing\RouteCollection;
 use Illuminate\Routing\UrlGenerator as BaseUrlGenerator;
@@ -28,7 +29,7 @@ class UrlGenerator extends BaseUrlGenerator
      * @param string|null                             $assetRoot
      */
     public function __construct(
-        RouteCollection $routes,
+        AbstractRouteCollection $routes,
         Request $request,
         Repository $config,
         ?string $assetRoot = null
