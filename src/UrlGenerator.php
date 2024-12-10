@@ -28,7 +28,7 @@ class UrlGenerator extends BaseUrlGenerator
      * @param string|null                             $assetRoot
      */
     public function __construct(
-        RouteCollection $routes,
+        RouteCollection|CompiledRouteCollection $routes,
         Request $request,
         Repository $config,
         ?string $assetRoot = null
